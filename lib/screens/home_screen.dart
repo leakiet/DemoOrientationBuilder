@@ -149,8 +149,8 @@ class ProductGrid extends StatelessWidget {
 
   int _getCrossAxisCount(BuildContext context, Orientation orientation) {
     double width = MediaQuery.of(context).size.width;
-    if (width >= 1200) return 10;
-    if (width >= 800) return 8;
+    if (width >= 1499) return 10;
+    if (width >= 800) return 6;
     if (orientation == Orientation.landscape) return 6;
     return 3;
   }
@@ -277,8 +277,8 @@ class _FilterPanelState extends State<FilterPanel> {
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
       child: Padding(
         padding: const EdgeInsets.all(18),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
+        child: ListView(
+          
           children: [
             const Text('Bộ lọc sản phẩm', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
             const SizedBox(height: 18),
